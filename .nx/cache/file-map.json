@@ -1,0 +1,530 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.6",
+  "deps": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@nrwl/cli": "^15.9.3",
+    "@nrwl/tao": "^16.4.1",
+    "@nrwl/workspace": "^16.4.1",
+    "@nx/workspace": "18.0.6",
+    "@types/jest": "^29.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "aws-sdk": "^2.1408.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.3",
+    "npm-audit-resolver": "3.0.0-RC.0",
+    "nx": "18.0.6",
+    "prettier": "^2.8.8",
+    "serverless-iam-roles-per-function": "^3.2.0",
+    "syncpack": "^10.6.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "backend": [
+        {
+          "file": "packages/backend/.eslintrc.js",
+          "hash": "7112865553168241090"
+        },
+        {
+          "file": "packages/backend/.lintstagedrc.js",
+          "hash": "10173178056233853510",
+          "deps": [
+            "npm:../../.lintstagedrc"
+          ]
+        },
+        {
+          "file": "packages/backend/functions/getNft/config.ts",
+          "hash": "1812013032866295571",
+          "deps": [
+            "npm:libs/configHelper/getHandlerPath",
+            "npm:resources/policies",
+            "npm:resources/index"
+          ]
+        },
+        {
+          "file": "packages/backend/functions/getNft/handler.mock.json",
+          "hash": "1389868326933519382"
+        },
+        {
+          "file": "packages/backend/functions/getNft/handler.ts",
+          "hash": "7686401129926224728",
+          "deps": [
+            "npm:@aws-sdk/client-dynamodb",
+            "npm:@aws-sdk/util-dynamodb"
+          ]
+        },
+        {
+          "file": "packages/backend/functions/index.ts",
+          "hash": "4477367186879093183"
+        },
+        {
+          "file": "packages/backend/libs/configHelper/getHandlerPath.ts",
+          "hash": "18220596443037144428"
+        },
+        {
+          "file": "packages/backend/package.json",
+          "hash": "1681974981362459302",
+          "deps": [
+            "npm:@aws-sdk/client-dynamodb",
+            "npm:@aws-sdk/util-dynamodb",
+            "npm:@serverless/typescript",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:aws-cdk-lib",
+            "npm:esbuild",
+            "npm:jest",
+            "npm:serverless",
+            "npm:serverless-better-credentials",
+            "npm:serverless-esbuild",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/backend/project.json",
+          "hash": "16660592222204036000"
+        },
+        {
+          "file": "packages/backend/resources/dynamoDB/index.ts",
+          "hash": "12943351701656069316"
+        },
+        {
+          "file": "packages/backend/resources/index.ts",
+          "hash": "6981515979959075216",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "packages/backend/resources/policies/index.ts",
+          "hash": "18400850467742488161"
+        },
+        {
+          "file": "packages/backend/serverless.ts",
+          "hash": "7832732493169874610",
+          "deps": [
+            "npm:@serverless/typescript"
+          ]
+        },
+        {
+          "file": "packages/backend/tsconfig.json",
+          "hash": "1711812214365529497"
+        }
+      ],
+      "frontend": [
+        {
+          "file": "packages/frontend/.env.example",
+          "hash": "5403244140701062646"
+        },
+        {
+          "file": "packages/frontend/.eslintignore",
+          "hash": "6478667235016243744"
+        },
+        {
+          "file": "packages/frontend/.eslintrc.js",
+          "hash": "7112865553168241090"
+        },
+        {
+          "file": "packages/frontend/.gitignore",
+          "hash": "6153327156376194772"
+        },
+        {
+          "file": "packages/frontend/.lintstagedrc.js",
+          "hash": "16448486029783366265",
+          "deps": [
+            "npm:../../.lintstagedrc"
+          ]
+        },
+        {
+          "file": "packages/frontend/.stylelintrc.js",
+          "hash": "15546945265240576299"
+        },
+        {
+          "file": "packages/frontend/config/checkEnvConsistency.ts",
+          "hash": "8927552781537113045",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "packages/frontend/config/getEnvWithProcessPrefix.ts",
+          "hash": "12361548972738054101",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "packages/frontend/config/index.ts",
+          "hash": "10336383012875460286"
+        },
+        {
+          "file": "packages/frontend/index.html",
+          "hash": "15208847760786152836"
+        },
+        {
+          "file": "packages/frontend/package.json",
+          "hash": "15321586443320762661",
+          "deps": [
+            "npm:@emotion/react",
+            "npm:@emotion/styled",
+            "npm:@mui/icons-material",
+            "npm:@mui/lab",
+            "npm:@mui/material",
+            "npm:@mui/system",
+            "npm:@react-hookz/web",
+            "npm:@reduxjs/toolkit",
+            "npm:@types/uuid",
+            "npm:axios",
+            "npm:material-ui-image",
+            "npm:mui-image",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-intl",
+            "npm:react-redux",
+            "npm:react-router-dom",
+            "npm:react-use",
+            "npm:redux",
+            "npm:uuid",
+            "npm:@stylelint/postcss-css-in-js",
+            "npm:@testing-library/dom",
+            "npm:@testing-library/jest-dom",
+            "npm:@testing-library/react",
+            "npm:@testing-library/react-hooks",
+            "npm:@testing-library/user-event",
+            "npm:@types/dotenv-flow",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:dotenv-flow",
+            "npm:eslint",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-risxss",
+            "npm:husky",
+            "npm:jest",
+            "npm:postcss",
+            "npm:postcss-syntax",
+            "npm:prettier",
+            "npm:redux-devtools-extension",
+            "npm:rollup",
+            "npm:rollup-plugin-visualizer",
+            "npm:stylelint",
+            "npm:stylelint-config-prettier",
+            "npm:stylelint-config-rational-order",
+            "npm:stylelint-config-standard",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:typescript",
+            "npm:vite",
+            "npm:vite-plugin-svgr",
+            "npm:vite-tsconfig-paths"
+          ]
+        },
+        {
+          "file": "packages/frontend/project.json",
+          "hash": "13350506329216470540"
+        },
+        {
+          "file": "packages/frontend/src/App.tsx",
+          "hash": "4397920542735020734",
+          "deps": [
+            "npm:@mui/material",
+            "npm:@mui/system",
+            "npm:theme"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/AppRoutes.tsx",
+          "hash": "1095114573145004967",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:pages"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/assets/background.png",
+          "hash": "747407101057829671"
+        },
+        {
+          "file": "packages/frontend/src/assets/coin.mp3",
+          "hash": "15999945504786435294"
+        },
+        {
+          "file": "packages/frontend/src/assets/kumo.png",
+          "hash": "16878032627028128338"
+        },
+        {
+          "file": "packages/frontend/src/assets/kumo.svg",
+          "hash": "1781547828229505069"
+        },
+        {
+          "file": "packages/frontend/src/assets/nft1.png",
+          "hash": "14823964794724508125"
+        },
+        {
+          "file": "packages/frontend/src/assets/nft2.png",
+          "hash": "17027711790874012994"
+        },
+        {
+          "file": "packages/frontend/src/assets/nft3.png",
+          "hash": "14055061087103777875"
+        },
+        {
+          "file": "packages/frontend/src/assets/nft4.png",
+          "hash": "17997551095095083517"
+        },
+        {
+          "file": "packages/frontend/src/assets/nft5.png",
+          "hash": "12960082179309402360"
+        },
+        {
+          "file": "packages/frontend/src/env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "packages/frontend/src/favicon.svg",
+          "hash": "5570214330692728248"
+        },
+        {
+          "file": "packages/frontend/src/hooks/index.ts",
+          "hash": "11187891217602279109"
+        },
+        {
+          "file": "packages/frontend/src/hooks/useAudio/index.ts",
+          "hash": "12983441996745791828"
+        },
+        {
+          "file": "packages/frontend/src/hooks/useAudio/useAudio.ts",
+          "hash": "17897364270689825210",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/main.tsx",
+          "hash": "6552290315420753232",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/pages/Home/Home.style.ts",
+          "hash": "15772911375058317542",
+          "deps": [
+            "npm:@mui/material",
+            "npm:theme"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/pages/Home/Home.tsx",
+          "hash": "9720961012468530629",
+          "deps": [
+            "npm:@mui/material",
+            "npm:@mui/system",
+            "npm:react",
+            "npm:assets/nft1.png",
+            "npm:assets/nft2.png",
+            "npm:assets/nft3.png",
+            "npm:assets/nft4.png",
+            "npm:assets/nft5.png",
+            "npm:axios",
+            "npm:hooks",
+            "npm:assets/kumo.svg",
+            "npm:react-use"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/pages/Home/index.ts",
+          "hash": "17325453861831153407"
+        },
+        {
+          "file": "packages/frontend/src/pages/index.ts",
+          "hash": "13778591762612326180"
+        },
+        {
+          "file": "packages/frontend/src/theme/helpers/index.ts",
+          "hash": "3460475674291046623"
+        },
+        {
+          "file": "packages/frontend/src/theme/helpers/spacing.ts",
+          "hash": "10956193410213110488"
+        },
+        {
+          "file": "packages/frontend/src/theme/index.ts",
+          "hash": "10702641662763850802"
+        },
+        {
+          "file": "packages/frontend/src/theme/muiTheme.ts",
+          "hash": "6097282529336064700",
+          "deps": [
+            "npm:@mui/lab",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/theme/overrides/MuiButton/MuiButtonOverrides.ts",
+          "hash": "1823112478151030744",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/theme/overrides/MuiButton/index.ts",
+          "hash": "8483233292313766504"
+        },
+        {
+          "file": "packages/frontend/src/theme/overrides/index.ts",
+          "hash": "3859922375384182721"
+        },
+        {
+          "file": "packages/frontend/src/theme/styled.ts",
+          "hash": "9562145349593716626",
+          "deps": [
+            "npm:@mui/system"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/theme/variants/MuiTypography/getH1Variants.ts",
+          "hash": "11445493235571029734",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/theme/variants/MuiTypography/getH2Variants.ts",
+          "hash": "2320968265729567391",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "packages/frontend/src/theme/variants/MuiTypography/index.ts",
+          "hash": "5351030813786359873"
+        },
+        {
+          "file": "packages/frontend/src/theme/variants/index.ts",
+          "hash": "14942436801767899632"
+        },
+        {
+          "file": "packages/frontend/tsconfig.json",
+          "hash": "2609800296632352753"
+        },
+        {
+          "file": "packages/frontend/vite.config.ts",
+          "hash": "6067424445821756654",
+          "deps": [
+            "npm:@vitejs/plugin-react",
+            "npm:rollup-plugin-visualizer",
+            "npm:vite",
+            "npm:vite-plugin-svgr",
+            "npm:vite-tsconfig-paths"
+          ]
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".all-contributorsrc",
+        "hash": "1392447984427694703"
+      },
+      {
+        "file": ".env.dev.example",
+        "hash": "11307367225451663339"
+      },
+      {
+        "file": ".eslintrc.js",
+        "hash": "8574305829011242768"
+      },
+      {
+        "file": ".gitconfig",
+        "hash": "18085507206931331285"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13867747031087202519"
+      },
+      {
+        "file": ".lintstagedrc.js",
+        "hash": "1156400693507061594"
+      },
+      {
+        "file": ".nvmrc",
+        "hash": "1095320927709084414"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "2891642126465113752"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16849429066302288771"
+      },
+      {
+        "file": ".syncpackrc.js",
+        "hash": "12115799575032160036"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "4217703181274893072"
+      },
+      {
+        "file": "LICENSE.md",
+        "hash": "13579326992167508190"
+      },
+      {
+        "file": "README.md",
+        "hash": "1679212537406888776"
+      },
+      {
+        "file": "commitlint.config.js",
+        "hash": "1797922694529005585"
+      },
+      {
+        "file": "dojo-serverless.code-workspace",
+        "hash": "6918291194159662998"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4197023339381507308"
+      },
+      {
+        "file": "package.json",
+        "hash": "17850738940046023576"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "5534478505876114580"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "2912386126149842548"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "9074695521091337464"
+      },
+      {
+        "file": "workspace.json",
+        "hash": "5308078171892626097"
+      }
+    ]
+  }
+}
