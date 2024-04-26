@@ -1,9 +1,9 @@
 {
-  "extends": "@nrwl/workspace/presets/npm.json",
+  "extends": "@nx/workspace/presets/npm.json",
   "npmScope": "keiko-serverless",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nx/workspace/tasks-runners/default",
       "options": {
         "cacheableOperations": [
           "build",
