@@ -16,7 +16,7 @@ const serverlessConfiguration: AWS = {
   ],
   provider: {
     name: 'aws',
-    runtime: 'nodejs14.x',
+    runtime: 'nodejs18.x',
     architecture: 'arm64',
     region: 'eu-west-1',
     profile: '${env:AWS_PROFILE}', // Used to point to the right AWS account
@@ -46,7 +46,7 @@ const serverlessConfiguration: AWS = {
       minify: false,
       sourcemap: true,
       exclude: ['aws-sdk'],
-      target: 'node14',
+      target: 'node18',
       platform: 'node',
       mainFields: ['module', 'main'],
       concurrency: 5,
