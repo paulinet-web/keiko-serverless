@@ -2,6 +2,7 @@
   "version": "6.0",
   "nxVersion": "18.0.6",
   "deps": {
+    "@aws-sdk/util-dynamodb": "3.370.0",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@nrwl/cli": "^15.9.3",
@@ -47,6 +48,23 @@
           ]
         },
         {
+          "file": "packages/backend/functions/createNft/config.ts",
+          "hash": "11584071830528391778",
+          "deps": [
+            "npm:libs/configHelper/getHandlerPath",
+            "npm:resources/index",
+            "npm:resources/policies"
+          ]
+        },
+        {
+          "file": "packages/backend/functions/createNft/handler.ts",
+          "hash": "1795798150626849574",
+          "deps": [
+            "npm:crypto",
+            "npm:@aws-sdk/client-dynamodb"
+          ]
+        },
+        {
           "file": "packages/backend/functions/getNft/config.ts",
           "hash": "1812013032866295571",
           "deps": [
@@ -69,7 +87,18 @@
         },
         {
           "file": "packages/backend/functions/index.ts",
-          "hash": "4477367186879093183"
+          "hash": "3689151411720595826"
+        },
+        {
+          "file": "packages/backend/functions/logMessage/config.ts",
+          "hash": "14074516298668862377",
+          "deps": [
+            "npm:libs/configHelper/getHandlerPath"
+          ]
+        },
+        {
+          "file": "packages/backend/functions/logMessage/handler.ts",
+          "hash": "12625467043315389305"
         },
         {
           "file": "packages/backend/libs/configHelper/getHandlerPath.ts",
@@ -112,11 +141,11 @@
         },
         {
           "file": "packages/backend/resources/policies/index.ts",
-          "hash": "18400850467742488161"
+          "hash": "7673451133254251445"
         },
         {
           "file": "packages/backend/serverless.ts",
-          "hash": "7832732493169874610",
+          "hash": "10400899868812500669",
           "deps": [
             "npm:@serverless/typescript"
           ]
@@ -459,7 +488,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "13867747031087202519"
+        "hash": "6477578530171017495"
       },
       {
         "file": ".lintstagedrc.js",
@@ -507,11 +536,11 @@
       },
       {
         "file": "package.json",
-        "hash": "17850738940046023576"
+        "hash": "6286731046077367239"
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "5534478505876114580"
+        "hash": "7303293161082577068"
       },
       {
         "file": "pnpm-workspace.yaml",
